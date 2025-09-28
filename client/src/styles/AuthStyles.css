@@ -1,63 +1,97 @@
-/* #####################################
-##########  register page */
+body {
+    background-color: #f0f2f5;
+    /* Light gray */
+    font-family: 'Roboto', sans-serif;
+}
+
 .form-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 80vh;
     flex-direction: column;
-    background-color: #f9f9f9;
-    background-image: linear-gradient(315deg, #f9f9f9 0%, #e0e0e0 74%);
+    /* background-color: #f9f9f9;
+    background-image: linear-gradient(315deg, #f9f9f9 0%, #e0e0e0 74%); */
 }
 
 .form-container form {
-    width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    /* Increased max-width */
+    padding: 40px;
+    /* Increased padding */
+    border: none;
+    /* Removed border */
+    border-radius: 10px;
+    /* More rounded corners */
+    background-color: #ffffff;
+    /* White background for form */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow */
 }
 
 .form-container form .title {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    margin-bottom: 30px;
+    /* Increased margin */
+    font-size: 32px;
+    /* Larger font size */
+    font-weight: 700;
+    /* Bolder font weight */
     color: #333;
 }
 
 .form-container form input {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 20px);
+    /* Adjust width for padding */
+    padding: 12px 10px;
+    /* Increased padding */
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid #ddd;
+    /* Lighter border */
+    border-radius: 5px;
+    /* Slightly more rounded */
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-container form input:focus {
+    border-color: #007bff;
+    /* Highlight on focus */
+    outline: none;
 }
 
 .form-container form button {
     width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
+    padding: 12px;
+    /* Increased padding */
+    background-color: #28a745;
+    /* Green for register */
     color: white;
     border: none;
-    border-radius: 3px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 18px;
+    /* Larger font size */
+    font-weight: 600;
     cursor: pointer;
+    margin-top: 20px;
+    /* Increased margin top */
+    transition: background-color 0.3s ease;
 }
 
 .form-container form button:hover {
-    background-color: #45a049;
-
+    background-color: #218838;
 }
 
 .form-container form .link {
     display: block;
     text-align: center;
-    margin-top: 10px;
-    color: #4caf50;
+    margin-top: 15px;
+    /* Increased margin top */
+    color: #007bff;
+    /* Blue link */
     text-decoration: none;
+    font-size: 15px;
 }
 
 .form-container form .link:hover {
@@ -65,14 +99,16 @@
 }
 
 .form-container form .error {
-    color: red;
+    color: #dc3545;
+    /* Red for error */
     font-size: 14px;
     margin-top: -5px;
     margin-bottom: 10px;
 }
 
 .form-container form .success {
-    color: green;
+    color: #28a745;
+    /* Green for success */
     font-size: 14px;
     margin-top: -5px;
     margin-bottom: 10px;
@@ -81,7 +117,8 @@
 .form-container form .info {
     font-size: 14px;
     margin-top: 10px;
-    color: #555;
+    color: #6c757d;
+    /* Gray for info */
 }
 
 /* #####################################
@@ -90,59 +127,90 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 80vh;
     flex-direction: column;
-    background-color: #f9f9f9;
-    background-image: linear-gradient(315deg, #f9f9f9 0%, #e0e0e0 74%);
+    /* background-color: #f9f9f9;
+    background-image: linear-gradient(315deg, #f9f9f9 0%, #e0e0e0 74%); */
 }
 
 .login-container form {
-    width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    /* Increased max-width */
+    padding: 40px;
+    /* Increased padding */
+    border: none;
+    /* Removed border */
+    border-radius: 10px;
+    /* More rounded corners */
+    background-color: #ffffff;
+    /* White background for form */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow */
 }
 
 .login-container form .title {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    margin-bottom: 30px;
+    /* Increased margin */
+    font-size: 32px;
+    /* Larger font size */
+    font-weight: 700;
+    /* Bolder font weight */
     color: #333;
 }
 
 .login-container form input {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 20px);
+    /* Adjust width for padding */
+    padding: 12px 10px;
+    /* Increased padding */
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid #ddd;
+    /* Lighter border */
+    border-radius: 5px;
+    /* Slightly more rounded */
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-container form input:focus {
+    border-color: #007bff;
+    /* Highlight on focus */
+    outline: none;
 }
 
 .login-container form button {
     width: 100%;
-    padding: 10px;
-    background-color: #008cba;
+    padding: 12px;
+    /* Increased padding */
+    background-color: #007bff;
+    /* Blue for login */
     color: white;
     border: none;
-    border-radius: 3px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 18px;
+    /* Larger font size */
+    font-weight: 600;
     cursor: pointer;
+    margin-top: 20px;
+    /* Increased margin top */
+    transition: background-color 0.3s ease;
 }
 
 .login-container form button:hover {
-    background-color: #007bb5;
+    background-color: #0056b3;
 }
 
 .login-container form .link {
     display: block;
     text-align: center;
-    margin-top: 10px;
-    color: #008cba;
+    margin-top: 15px;
+    /* Increased margin top */
+    color: #007bff;
+    /* Blue link */
     text-decoration: none;
+    font-size: 15px;
 }
 
 .login-container form .link:hover {
@@ -150,14 +218,16 @@
 }
 
 .login-container form .error {
-    color: red;
+    color: #dc3545;
+    /* Red for error */
     font-size: 14px;
     margin-top: -5px;
     margin-bottom: 10px;
 }
 
 .login-container form .success {
-    color: green;
+    color: #28a745;
+    /* Green for success */
     font-size: 14px;
     margin-top: -5px;
     margin-bottom: 10px;
@@ -166,7 +236,8 @@
 .login-container form .info {
     font-size: 14px;
     margin-top: 10px;
-    color: #555;
+    color: #6c757d;
+    /* Gray for info */
 }
 
 /* #####################################

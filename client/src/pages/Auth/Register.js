@@ -11,6 +11,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
 
   // handle form
@@ -23,6 +24,7 @@ const Register = () => {
         password,
         phone,
         address,
+        answer,
       });
 
       if (res.data.success) {
@@ -40,8 +42,8 @@ const Register = () => {
   return (
     <Layout title={"Register app"}>
       <div className="form-container">
-        <h1>Register page</h1>
         <form onSubmit={handleSubmit}>
+          <h4 className="title">REGISTER</h4>
           <div className="mb-3">
             <input
               type="text"
@@ -94,6 +96,17 @@ const Register = () => {
               className="form-control"
               id="exampleInputAddress1"
               placeholder="Enter Your Address"
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <input
+              type="text"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              className="form-control"
+              id="exampleInputAnswer1"
+              placeholder="What is your favorite sport?"
               required
             />
           </div>

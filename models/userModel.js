@@ -24,6 +24,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    answer: {
+      type: String,
+      required: true,
+    }, // For password recovery
+
     role: {
       type: Number,
       default: 0, // 0 for regular user, 1 for admin
